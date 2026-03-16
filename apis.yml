@@ -3,7 +3,7 @@ description: SpecFlow is a pragmatic BDD solution for .NET that uses the Gherkin
 image: https://specflow.org/wp-content/uploads/2020/09/specflow-logo.svg
 url: https://specflow.org
 created: '2024'
-modified: '2024'
+modified: '2026-03-16'
 apis:
 - name: SpecFlow
   description: Behavior Driven Development framework for .NET that bridges the communication gap between domain experts and developers by allowing natural language specifications to be turned into automated tests.
