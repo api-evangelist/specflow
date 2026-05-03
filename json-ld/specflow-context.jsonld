@@ -1,0 +1,65 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "specflow": "https://specflow.org/vocab/",
+    "gherkin": "https://cucumber.io/gherkin/vocab/",
+    "name": "name",
+    "description": "description",
+    "SoftwareApplication": "SoftwareApplication",
+    "SoftwareSourceCode": "SoftwareSourceCode",
+    "Feature": {
+      "@id": "specflow:Feature",
+      "@type": "@id"
+    },
+    "Scenario": {
+      "@id": "specflow:Scenario",
+      "@type": "@id"
+    },
+    "ScenarioOutline": {
+      "@id": "specflow:ScenarioOutline",
+      "@type": "@id"
+    },
+    "StepDefinition": {
+      "@id": "specflow:StepDefinition",
+      "@type": "@id"
+    },
+    "Background": {
+      "@id": "specflow:Background",
+      "@type": "@id"
+    },
+    "Step": {
+      "@id": "gherkin:Step",
+      "@type": "@id"
+    },
+    "Given": {
+      "@id": "gherkin:Given"
+    },
+    "When": {
+      "@id": "gherkin:When"
+    },
+    "Then": {
+      "@id": "gherkin:Then"
+    },
+    "tag": {
+      "@id": "specflow:tag",
+      "@type": "xsd:string"
+    },
+    "keyword": {
+      "@id": "gherkin:keyword",
+      "@type": "xsd:string"
+    },
+    "stepText": {
+      "@id": "gherkin:text",
+      "@type": "xsd:string"
+    },
+    "featureFile": {
+      "@id": "specflow:featureFile",
+      "@type": "xsd:string"
+    },
+    "language": {
+      "@id": "specflow:language",
+      "@type": "xsd:string"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

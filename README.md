@@ -1,43 +1,65 @@
-# SpecFlow (specflow)
-SpecFlow is a pragmatic BDD solution for .NET that uses the Gherkin specification language and integrates with Visual Studio.
+# SpecFlow
 
-**URL:** [Visit APIs.json URL](https://specflow.org)
+SpecFlow was a pragmatic BDD (Behavior-Driven Development) solution for .NET that used the Gherkin specification language to bridge the communication gap between domain experts and developers. Originally developed by TechTalk, acquired by Tricentis in 2020, and reached end-of-life on December 31, 2024. The community continuation is [Reqnroll](https://reqnroll.net/).
+
+**URL:** [https://github.com/SpecFlowOSS/SpecFlow](https://github.com/SpecFlowOSS/SpecFlow)
+
+> **Note:** SpecFlow reached end-of-life on December 31, 2024. The successor project is [Reqnroll](https://reqnroll.net/), a community fork maintaining full backward compatibility with .NET 8.0 and .NET 9.0 support.
+
+## Scope
+
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
+
+## Tags
+
+.NET, BDD, Cucumber, Gherkin, Testing
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-05-02
 
-## APIs
+## Products
 
-### SpecFlow
-Behavior Driven Development framework for .NET that bridges the communication gap between domain experts and developers by allowing natural language specifications to be turned into automated tests.
+| Product | Description |
+|---|---|
+| [SpecFlow](https://github.com/SpecFlowOSS/SpecFlow) | BDD framework for .NET using Gherkin syntax (retired Dec 2024) |
+| [Reqnroll](https://reqnroll.net/) | Community fork and successor to SpecFlow with .NET 8/9 support |
 
-**Human URL:** [https://specflow.org](https://specflow.org)
+## Artifacts
 
+### JSON Schema
 
-#### Tags:
+- [specflow-scenario-schema.json](json-schema/specflow-scenario-schema.json) — Schema for SpecFlow Scenario resources including Gherkin steps
+- [specflow-feature-schema.json](json-schema/specflow-feature-schema.json) — Schema for SpecFlow Feature file structure
 
- - BDD, Testing, Automation, .NET, Gherkin, Cucumber
+### JSON Structure
 
-#### Properties
+- [specflow-feature-structure.json](json-structure/specflow-feature-structure.json) — Structure documentation for Feature files and their relationships
 
+### JSON-LD
+
+- [specflow-context.jsonld](json-ld/specflow-context.jsonld) — JSON-LD context mapping SpecFlow vocabulary to linked data semantics
+
+### Examples
+
+- [specflow-feature-example.json](examples/specflow-feature-example.json) — Example Gherkin feature file with Scenario and ScenarioOutline
+
+### Vocabulary
+
+- [specflow-vocabulary.yml](vocabulary/specflow-vocabulary.yml) — Domain vocabulary for SpecFlow/BDD concepts including Gherkin, step definitions, hooks, and patterns
+
+## Resources
+
+- [GitHub Repository](https://github.com/SpecFlowOSS/SpecFlow)
 - [Documentation](https://docs.specflow.org)
-- [GettingStarted](https://docs.specflow.org/projects/getting-started/en/latest/)
-- [APIDocumentation](https://docs.specflow.org/projects/specflow/en/latest/)
-- [GitHub](https://github.com/SpecFlowOSS/SpecFlow)
-- [NuGet](https://www.nuget.org/packages/SpecFlow/)
-- [Tutorials](https://docs.specflow.org/projects/specflow/en/latest/Guides.html)
-- [Community](https://specflow.org/community/)
-- [Forums](https://support.specflow.org)
-- [Blog](https://specflow.org/blog/)
-- [Extensions](https://specflow.org/tools/)
-- [License](https://github.com/SpecFlowOSS/SpecFlow/blob/master/LICENSE.txt)
-- [ReleaseNotes](https://github.com/SpecFlowOSS/SpecFlow/releases)
-- [Twitter](https://twitter.com/specflow)
+- [NuGet Package](https://www.nuget.org/packages/SpecFlow/)
+- [Reqnroll (Successor)](https://reqnroll.net/)
+- [End-of-Life Announcement](https://reqnroll.net/news/2025/01/specflow-end-of-life-has-been-announced/)
 
 ## Maintainers
 
-**FN:** SpecFlow Team
-
-**Email:** info@specflow.org
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com

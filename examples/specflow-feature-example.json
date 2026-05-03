@@ -1,0 +1,60 @@
+{
+  "title": "SpecFlow Feature File Example",
+  "description": "Example of a SpecFlow BDD feature file in JSON representation for user authentication",
+  "format": "Gherkin/SpecFlow",
+  "example": {
+    "name": "User Authentication",
+    "description": "As a registered user I want to authenticate with the system so that I can access protected resources",
+    "tags": ["authentication", "smoke"],
+    "background": {
+      "steps": [
+        {"keyword": "Given", "text": "the authentication service is available"}
+      ]
+    },
+    "scenarios": [
+      {
+        "type": "Scenario",
+        "title": "Successful login with valid credentials",
+        "tags": ["happy-path"],
+        "steps": [
+          {"keyword": "Given", "text": "a user with email 'user@example.com' and password 'SecurePass123' exists"},
+          {"keyword": "When", "text": "I submit valid credentials"},
+          {"keyword": "Then", "text": "I should receive a valid access token"},
+          {"keyword": "And", "text": "the token should expire in 24 hours"}
+        ]
+      },
+      {
+        "type": "Scenario",
+        "title": "Failed login with invalid password",
+        "tags": ["negative"],
+        "steps": [
+          {"keyword": "Given", "text": "a user with email 'user@example.com' exists"},
+          {"keyword": "When", "text": "I submit an incorrect password"},
+          {"keyword": "Then", "text": "I should receive a 401 Unauthorized response"},
+          {"keyword": "And", "text": "the response should contain an error message"}
+        ]
+      },
+      {
+        "type": "ScenarioOutline",
+        "title": "Login attempt rate limiting",
+        "tags": ["security"],
+        "steps": [
+          {"keyword": "Given", "text": "a user has failed to login <attempts> times"},
+          {"keyword": "When", "text": "they attempt to login again"},
+          {"keyword": "Then", "text": "the response status should be <status>"}
+        ],
+        "examples": [
+          {
+            "header": ["attempts", "status"],
+            "rows": [
+              ["3", "200"],
+              ["5", "429"],
+              ["10", "429"]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "gherkin_source": "Feature: User Authentication\n  As a registered user\n  I want to authenticate with the system\n  So that I can access protected resources\n\n  Background:\n    Given the authentication service is available\n\n  @authentication @smoke @happy-path\n  Scenario: Successful login with valid credentials\n    Given a user with email 'user@example.com' and password 'SecurePass123' exists\n    When I submit valid credentials\n    Then I should receive a valid access token\n    And the token should expire in 24 hours"
+}

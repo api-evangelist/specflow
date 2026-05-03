@@ -1,0 +1,162 @@
+name: SpecFlow Vocabulary
+description: >-
+  Domain vocabulary for SpecFlow (retired) and its successor Reqnroll — BDD frameworks
+  for .NET using the Gherkin specification language. Covers key concepts, terminology,
+  and the Cucumber-compatible testing patterns used in behavior-driven development.
+version: '1.0'
+created: '2026-05-02'
+modified: '2026-05-02'
+
+terms:
+  - term: BDD
+    fullForm: Behavior-Driven Development
+    definition: >-
+      A software development methodology that combines Test-Driven Development (TDD)
+      with domain-driven design and natural language specifications. BDD emphasizes
+      collaboration between developers, QA, and business stakeholders by expressing
+      requirements as executable scenarios.
+    tags:
+      - Methodology
+      - Testing
+
+  - term: Gherkin
+    definition: >-
+      A plain-text language used to write BDD scenarios in a structured, human-readable
+      format. Gherkin keywords include Feature, Background, Scenario, Scenario Outline,
+      Given, When, Then, And, But, and Examples. Gherkin is the specification language
+      shared by SpecFlow, Reqnroll, Cucumber, and Behave.
+    tags:
+      - Specification
+      - Testing
+
+  - term: Feature
+    definition: >-
+      A .feature file containing a collection of related scenarios that describe behavior
+      for a single domain capability. Features begin with a Feature keyword followed by
+      a description, optional Background, and one or more Scenarios.
+    tags:
+      - Gherkin
+      - Testing
+
+  - term: Scenario
+    definition: >-
+      A concrete example of system behavior described using Given/When/Then steps.
+      Scenarios are the primary unit of BDD specification and serve as both documentation
+      and automated test cases when step definitions are implemented.
+    tags:
+      - Gherkin
+      - Testing
+
+  - term: Scenario Outline
+    definition: >-
+      A parameterized scenario template that runs multiple times with different input
+      values defined in an Examples table. Used to test the same behavior with varied
+      data without duplicating scenario steps.
+    tags:
+      - Gherkin
+      - Testing
+
+  - term: Given
+    definition: >-
+      A Gherkin keyword describing the initial context or preconditions for a scenario.
+      Represents system state before the user action being tested.
+    tags:
+      - Gherkin
+      - Step
+
+  - term: When
+    definition: >-
+      A Gherkin keyword describing the action or event that the scenario exercises.
+      Represents the specific behavior being tested.
+    tags:
+      - Gherkin
+      - Step
+
+  - term: Then
+    definition: >-
+      A Gherkin keyword describing the expected outcome or result of the scenario action.
+      Contains assertions that verify the system behaved correctly.
+    tags:
+      - Gherkin
+      - Step
+
+  - term: Step Definition
+    definition: >-
+      A C# method (in SpecFlow/Reqnroll) decorated with [Given], [When], or [Then]
+      attributes that matches a Gherkin step pattern and contains the automation code
+      to execute that step. Step definitions bind natural language to test code.
+    tags:
+      - .NET
+      - Implementation
+
+  - term: Background
+    definition: >-
+      A special Gherkin block containing steps that run before each scenario in a
+      feature file. Used to set up shared preconditions without repeating Given steps
+      in every scenario.
+    tags:
+      - Gherkin
+      - Testing
+
+  - term: Hooks
+    definition: >-
+      SpecFlow/Reqnroll methods decorated with [BeforeScenario], [AfterScenario],
+      [BeforeFeature], or [AfterFeature] that execute at specific points in the
+      test lifecycle for setup and teardown operations.
+    tags:
+      - .NET
+      - Lifecycle
+
+  - term: Context Injection
+    definition: >-
+      A dependency injection pattern in SpecFlow/Reqnroll that enables sharing state
+      between step definition classes within a scenario without using static variables.
+    tags:
+      - .NET
+      - Patterns
+
+  - term: Living Documentation
+    definition: >-
+      Auto-generated documentation from executed SpecFlow scenarios that shows which
+      features are passing, failing, or pending, providing a real-time view of system
+      behavior aligned with business specifications.
+    tags:
+      - Documentation
+      - Reporting
+
+  - term: Reqnroll
+    definition: >-
+      The open-source community continuation and fork of SpecFlow, created in 2024
+      after Tricentis announced SpecFlow end-of-life. Reqnroll maintains full backward
+      compatibility with SpecFlow v4 while adding .NET 8.0 and .NET 9.0 support.
+    tags:
+      - .NET
+      - Open Source
+      - Successor
+
+categories:
+  - name: Specification
+    description: Concepts related to writing BDD specifications
+    terms:
+      - Gherkin
+      - Feature
+      - Scenario
+      - Scenario Outline
+      - Background
+      - Given
+      - When
+      - Then
+
+  - name: Implementation
+    description: Concepts related to implementing BDD automation in .NET
+    terms:
+      - Step Definition
+      - Hooks
+      - Context Injection
+
+  - name: Methodology
+    description: Higher-level concepts and practices
+    terms:
+      - BDD
+      - Living Documentation
+      - Reqnroll

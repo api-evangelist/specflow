@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/specflow/main/json-schema/specflow-scenario-schema.json",
+  "title": "SpecFlow Scenario",
+  "description": "Represents a BDD scenario definition in SpecFlow/Gherkin format with all associated metadata",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The scenario title in natural language"
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional description providing additional context for the scenario"
+    },
+    "tags": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Tags for categorizing and filtering scenarios (e.g., @smoke, @regression, @wip)"
+    },
+    "steps": {
+      "type": "array",
+      "description": "Ordered list of Given/When/Then steps",
+      "items": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "enum": ["Given", "When", "Then", "And", "But"],
+            "description": "The Gherkin keyword for this step"
+          },
+          "text": {
+            "type": "string",
+            "description": "The step text in natural language"
+          },
+          "dataTable": {
+            "type": "array",
+            "description": "Optional data table rows",
+            "items": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          },
+          "docString": {
+            "type": "string",
+            "description": "Optional multi-line string argument"
+          }
+        },
+        "required": ["keyword", "text"]
+      }
+    },
+    "examples": {
+      "type": "array",
+      "description": "Example tables for Scenario Outlines",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tags": {"type": "array", "items": {"type": "string"}},
+          "header": {"type": "array", "items": {"type": "string"}},
+          "rows": {
+            "type": "array",
+            "items": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "feature": {
+      "type": "string",
+      "description": "Name of the feature this scenario belongs to"
+    },
+    "featureFile": {
+      "type": "string",
+      "description": "Path to the .feature file containing this scenario"
+    }
+  },
+  "required": ["title", "steps"]
+}

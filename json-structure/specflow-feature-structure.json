@@ -1,0 +1,39 @@
+{
+  "name": "SpecFlow Feature",
+  "description": "Structure of SpecFlow Feature files and their relationship to Scenarios and Step Definitions",
+  "type": "object",
+  "fields": [
+    {"name": "name", "type": "string", "required": true, "description": "Feature name in natural language"},
+    {"name": "description", "type": "string", "required": false, "description": "Business context description"},
+    {"name": "tags", "type": "array<string>", "required": false, "description": "Classification tags (@smoke, @regression)"},
+    {"name": "background", "type": "Background", "required": false, "description": "Steps that run before each scenario"},
+    {"name": "scenarios", "type": "array<Scenario>", "required": true, "description": "List of scenarios in this feature"},
+    {"name": "language", "type": "string", "required": false, "description": "Gherkin language code (default: en)"}
+  ],
+  "relationships": [
+    {"resource": "Scenario", "cardinality": "one-to-many", "description": "A feature contains one or more scenarios"},
+    {"resource": "StepDefinition", "cardinality": "many-to-many", "description": "Steps are bound to C# step definition methods"},
+    {"resource": "Background", "cardinality": "one-to-one", "description": "Optional pre-scenario setup steps"}
+  ],
+  "children": [
+    {
+      "name": "Scenario",
+      "fields": [
+        {"name": "type", "type": "enum", "values": ["Scenario", "ScenarioOutline"], "required": true},
+        {"name": "title", "type": "string", "required": true},
+        {"name": "tags", "type": "array<string>", "required": false},
+        {"name": "steps", "type": "array<Step>", "required": true},
+        {"name": "examples", "type": "array<ExampleTable>", "required": false}
+      ]
+    },
+    {
+      "name": "Step",
+      "fields": [
+        {"name": "keyword", "type": "enum", "values": ["Given", "When", "Then", "And", "But"], "required": true},
+        {"name": "text", "type": "string", "required": true},
+        {"name": "dataTable", "type": "array<array<string>>", "required": false},
+        {"name": "docString", "type": "string", "required": false}
+      ]
+    }
+  ]
+}
