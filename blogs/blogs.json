@@ -1,0 +1,13 @@
+{
+  "repo": "specflow",
+  "feeds": [
+    {
+      "source": "https://reqnroll.net/news/2025/01/specflow-end-of-life-has-been-announced/",
+      "feed_url": "https://reqnroll.net/feed.xml",
+      "saved": 10,
+      "title": "Reqnroll"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:36:55Z"
+}
