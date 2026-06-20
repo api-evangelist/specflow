@@ -9,7 +9,7 @@ description: >-
   Tricentis in 2020 and reached end-of-life on December 31, 2024. The community
   continuation is Reqnroll, a fork maintaining full backward compatibility.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 tags:
   - .NET
