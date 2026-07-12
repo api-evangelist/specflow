@@ -73,6 +73,8 @@ apis:
       .NET 9.0. Created in 2024 after Tricentis announced SpecFlow end-of-life,
       Reqnroll has over 5,000 active projects and a growing contributor base.
 common:
+  - type: DomainSecurity
+    url: security/specflow-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/specflow
   - url: https://github.com/SpecFlowOSS/SpecFlow
