@@ -103,6 +103,11 @@ apis:
       .NET 9.0. Created in 2024 after Tricentis announced SpecFlow end-of-life,
       Reqnroll has over 5,000 active projects and a growing contributor base.
 common:
+  - type: ParentCompany
+    url: https://apis.io/providers/tricentis/
+    name: Tricentis
+    x-relationship: acquired
+    x-evidence: "Originally developed by TechTalk, it was acquired by Tricentis in 2020 and reached end-of-life on December 31, 2024."
   - type: DomainSecurity
     url: security/specflow-domain-security.yml
   - type: LinkedIn
