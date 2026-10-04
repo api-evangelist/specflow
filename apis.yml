@@ -78,7 +78,7 @@ apis:
       - BDD
       - Cucumber
       - Gherkin
-      - Open-Source
+      - Open Source
       - Testing
     tags_raw:
       - .NET
@@ -87,6 +87,7 @@ apis:
       - Gherkin
       - Open Source
       - Testing
+      - Open-Source
     humanURL: https://reqnroll.net/
     properties:
       - url: https://reqnroll.net/
