@@ -104,6 +104,12 @@ apis:
       .NET 9.0. Created in 2024 after Tricentis announced SpecFlow end-of-life,
       Reqnroll has over 5,000 active projects and a growing contributor base.
 common:
+  - type: Plans
+    url: plans/specflow-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/specflow-rate-limits.yml
+  - type: FinOps
+    url: finops/specflow-finops.yml
   - type: ParentCompany
     url: https://apis.io/providers/tricentis/
     name: Tricentis
